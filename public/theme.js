@@ -7,10 +7,8 @@ function setTheme(theme) {
   document.documentElement.setAttribute("data-theme", theme);
   localStorage.setItem("start-theme", theme);
 
-  // Update toggle button icon
   const toggleBtn = document.getElementById("themeToggle");
   if (toggleBtn) {
-    toggleBtn.innerHTML = theme === "dark" ? "☀️" : "🌙";
     toggleBtn.setAttribute(
       "aria-label",
       theme === "dark" ? "Переключить на светлую тему" : "Переключить на тёмную тему"

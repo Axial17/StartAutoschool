@@ -1,7 +1,7 @@
 # Dependencies
 node_modules/
 
-# Environment variables
+# Environment variables (содержит токены!)
 .env
 
 # Logs
@@ -24,3 +24,9 @@ desktop.ini
 # Build artifacts
 dist/
 build/
+
+# Vercel
+.vercel/
+
+# Gemini
+.gemini/

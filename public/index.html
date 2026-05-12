@@ -51,6 +51,9 @@
     </script>
   </head>
   <body>
+    <!-- Interactive background -->
+    <canvas id="bgCanvas"></canvas>
+
     <!-- NAV -->
     <nav>
       <a href="#" class="nav-logo">
@@ -173,10 +176,11 @@
         <li><a href="#team" data-i18n="nav.team">Инструкторы</a></li>
         <li>
           <div class="nav-controls">
-            <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">🌙</button>
+            <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему"></button>
             <div class="lang-switch">
-              <button class="lang-btn active" data-lang="ru">RU</button>
-              <button class="lang-btn" data-lang="kz">KZ</button>
+              <button class="lang-btn active" data-lang="ru">Ru</button>
+              <span class="lang-divider"></span>
+              <button class="lang-btn" data-lang="kz">Kz</button>
             </div>
           </div>
         </li>
@@ -409,43 +413,63 @@
 
       <div class="team-grid">
         <div class="team-card fade-up">
-          <div class="team-img-placeholder"><img class="team-img" src="./assets/WhatsApp Image 2026-04-17 at 21.07.39.jpeg" alt="Анна Смирнова"></div>
+          <div class="team-img-placeholder"><img class="team-img pos-sergey" src="./assets/sergey_nikolaev.jpg" alt="Сергей"></div>
           <div class="team-info">
-            <h3>Анна<br />Смирнова</h3>
+            <h3>Саят</h3>
             <span data-i18n="team.role">Автоинструктор</span>
-            <div class="team-detail"><strong data-i18n="team.car.label">Автомобиль:</strong> <p>Honda&nbspCivic (АКПП,бензин&nbsp1.6)</p></div>
-            <div class="team-detail"><strong data-i18n="team.district.label">Район:</strong> <p>Алмалинский</p></div>
-            <a href="https://wa.me/77473045000?text=Здраствуйте,%20хочу%20записаться%20к%20Анне%20Смирновой" class="btn-book btn-book-filled" target="_blank" data-i18n="team.book">Записаться</a>
+            <div class="team-detail"><strong>Стаж:</strong> <p>10 лет</p></div>
+            <div class="team-detail"><strong data-i18n="team.car.label">Автомобиль:</strong> <p>Kia&nbspK7 (АКПП)</p></div>
+            <a href="https://wa.me/77473045000?text=Здравствуйте,%20хочу%20записаться%20к%20инструктору%20Сергею" class="btn-book btn-book-filled" target="_blank" data-i18n="team.book">Записаться</a>
           </div>
         </div>
         <div class="team-card fade-up" style="transition-delay: 0.1s">
-          <div class="team-img-placeholder"><img class="team-img" src="./assets/WhatsApp Image 2026-04-17 at 21.08.36.jpeg" alt="Иван Петров"></div>
+          <div class="team-img-placeholder"><img class="team-img" src="./assets/WhatsApp Image 2026-04-29 at 11.24.42.jpeg" alt="Саят"></div> 
           <div class="team-info">
-            <h3>Иван<br />Петров</h3>
+            <h3>Дулат</h3>
             <span data-i18n="team.role">Автоинструктор</span>
-            <div class="team-detail"><strong data-i18n="team.car.label">Автомобиль:</strong> <p>Honda&nbspCivic (АКПП,бензин&nbsp1.6)</p></div>
-            <div class="team-detail"><strong data-i18n="team.district.label">Район:</strong> <p>Алмалинский</p></div>
-            <a href="https://wa.me/77473045000?text=Здраствуйте,%20хочу%20записаться%20к%20Ивану%20Петрову" class="btn-book btn-book-filled" target="_blank" data-i18n="team.book">Записаться</a>
+            <div class="team-detail"><strong>Стаж:</strong> <p>5 лет</p></div>
+            <div class="team-detail"><strong data-i18n="team.car.label">Автомобиль:</strong> <p>Ravon (МКПП)</p></div>
+            <a href="https://wa.me/77473045000?text=Здравствуйте,%20хочу%20записаться%20к%20инструктору%20Саяту" class="btn-book btn-book-filled" target="_blank" data-i18n="team.book">Записаться</a>
           </div>
         </div>
         <div class="team-card fade-up" style="transition-delay: 0.2s">
-          <div class="team-img-placeholder">👩‍🏫</div>
+          <div class="team-img-placeholder"><img class="team-img pos-center" src="./assets/WhatsApp Image 2026-04-29 at 11.24.00.jpeg" alt="Елдос"></div>
           <div class="team-info">
-            <h3>Мария<br />Кузнецова</h3>
+            <h3>Елдос</h3>
             <span data-i18n="team.role">Автоинструктор</span>
-            <div class="team-detail"><strong data-i18n="team.car.label">Автомобиль:</strong> <p>Honda&nbspCivic (АКПП,бензин&nbsp1.6)</p></div>
-            <div class="team-detail"><strong data-i18n="team.district.label">Район:</strong> <p>Алмалинский</p></div>
-            <a href="https://wa.me/77473045000?text=Здраствуйте,%20хочу%20записаться%20к%20Марии%20Кузнецовой" class="btn-book btn-book-filled" target="_blank" data-i18n="team.book">Записаться</a>
+            <div class="team-detail"><strong>Стаж:</strong> <p>10 лет</p></div>
+            <div class="team-detail"><strong data-i18n="team.car.label">Автомобиль:</strong> <p>Changan (АКПП)</p></div>
+            <a href="https://wa.me/77473045000?text=Здравствуйте,%20хочу%20записаться%20к%20инструктору%20Елдосу" class="btn-book btn-book-filled" target="_blank" data-i18n="team.book">Записаться</a>
           </div>
         </div>
         <div class="team-card fade-up" style="transition-delay: 0.3s">
-          <div class="team-img-placeholder">👨‍🏫</div>
+          <div class="team-img-placeholder"><img class="team-img pos-mid" src="./assets/WhatsApp Image 2026-04-29 at 11.24.43.jpeg" alt="Даулет"></div>
           <div class="team-info">
-            <h3>Сергей<br />Николаев</h3>
+            <h3>Даулет</h3>
             <span data-i18n="team.role">Автоинструктор</span>
-            <div class="team-detail"><strong data-i18n="team.car.label">Автомобиль:</strong> <p>Honda&nbspCivic (АКПП,бензин&nbsp1.6)</p></div>
-            <div class="team-detail"><strong data-i18n="team.district.label">Район:</strong> <p>Алмалинский</p></div>
-            <a href="https://wa.me/77473045000?text=Здраствуйте,%20хочу%20записаться%20к%20Сергею%20Николаеву" class="btn-book btn-book-filled" target="_blank" data-i18n="team.book">Записаться</a>
+            <div class="team-detail"><strong>Стаж:</strong> <p>15 лет</p></div>
+            <div class="team-detail"><strong data-i18n="team.car.label">Автомобиль:</strong> <p>Hyundai&nbspElantra (АКПП)</p></div>
+            <a href="https://wa.me/77473045000?text=Здравствуйте,%20хочу%20записаться%20к%20инструктору%20Даулету" class="btn-book btn-book-filled" target="_blank" data-i18n="team.book">Записаться</a>
+          </div>
+        </div>
+        <div class="team-card fade-up" style="transition-delay: 0.4s">
+          <div class="team-img-placeholder"><img class="team-img" src="./assets/WhatsApp Image 2026-04-17 at 21.08.36.jpeg" alt="Олжас"></div>
+          <div class="team-info">
+            <h3>Олжас</h3>
+            <span data-i18n="team.role">Автоинструктор</span>
+            <div class="team-detail"><strong>Стаж:</strong> <p>10 лет</p></div>
+            <div class="team-detail"><strong data-i18n="team.car.label">Автомобиль:</strong> <p>Hyundai&nbspElantra (АКПП)</p></div>
+            <a href="https://wa.me/77473045000?text=Здравствуйте,%20хочу%20записаться%20к%20инструктору%20Олжасу" class="btn-book btn-book-filled" target="_blank" data-i18n="team.book">Записаться</a>
+          </div>
+        </div>
+        <div class="team-card fade-up" style="transition-delay: 0.5s">
+          <div class="team-img-placeholder"><img class="team-img pos-lower" src="./assets/WhatsApp Image 2026-04-17 at 21.07.39.jpeg" alt="Дулат"></div>
+          <div class="team-info">
+            <h3>Андрей</h3>
+            <span data-i18n="team.role">Автоинструктор</span>
+            <div class="team-detail"><strong>Стаж:</strong> <p>15 лет</p></div>
+            <div class="team-detail"><strong data-i18n="team.car.label">Автомобиль:</strong> <p>Toyota&nbspCorolla (МКПП)</p></div>
+            <a href="https://wa.me/77473045000?text=Здравствуйте,%20хочу%20записаться%20к%20инструктору%20Дулату" class="btn-book btn-book-filled" target="_blank" data-i18n="team.book">Записаться</a>
           </div>
         </div>
       </div>
@@ -618,6 +642,100 @@
       document
         .querySelectorAll(".fade-up")
         .forEach((el) => observer.observe(el));
+    </script>
+
+    <!-- Cursor-interactive particle background -->
+    <script>
+    (function() {
+      const canvas = document.getElementById('bgCanvas');
+      const ctx = canvas.getContext('2d');
+      let w, h, particles, mouse = { x: -1000, y: -1000 };
+      const PARTICLE_COUNT = 40;
+      const CONNECT_DIST = 140;
+      const MOUSE_RADIUS = 200;
+
+      function resize() {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+      }
+
+      function createParticles() {
+        particles = [];
+        for (let i = 0; i < PARTICLE_COUNT; i++) {
+          particles.push({
+            x: Math.random() * w,
+            y: Math.random() * h,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: (Math.random() - 0.5) * 0.4,
+            r: Math.random() * 2 + 1
+          });
+        }
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, w, h);
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        const dotColor = isDark ? 'rgba(214,43,43,' : 'rgba(180,40,40,';
+        const lineColor = isDark ? 'rgba(214,43,43,' : 'rgba(180,40,40,';
+
+        for (let i = 0; i < particles.length; i++) {
+          const p = particles[i];
+
+          // Mouse attraction — gentle pull
+          const dx = mouse.x - p.x;
+          const dy = mouse.y - p.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < MOUSE_RADIUS && dist > 1) {
+            const force = (MOUSE_RADIUS - dist) / MOUSE_RADIUS * 0.012;
+            p.vx += dx * force;
+            p.vy += dy * force;
+          }
+
+          // Damping
+          p.vx *= 0.99;
+          p.vy *= 0.99;
+
+          p.x += p.vx;
+          p.y += p.vy;
+
+          // Wrap edges
+          if (p.x < -10) p.x = w + 10;
+          if (p.x > w + 10) p.x = -10;
+          if (p.y < -10) p.y = h + 10;
+          if (p.y > h + 10) p.y = -10;
+
+          // Draw dot
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = dotColor + (0.15 + p.r * 0.06) + ')';
+          ctx.fill();
+
+          // Connect nearby
+          for (let j = i + 1; j < particles.length; j++) {
+            const p2 = particles[j];
+            const d = Math.hypot(p.x - p2.x, p.y - p2.y);
+            if (d < CONNECT_DIST) {
+              ctx.beginPath();
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(p2.x, p2.y);
+              ctx.strokeStyle = lineColor + (0.06 * (1 - d / CONNECT_DIST)) + ')';
+              ctx.lineWidth = 0.6;
+              ctx.stroke();
+            }
+          }
+        }
+
+        requestAnimationFrame(draw);
+      }
+
+      resize();
+      createParticles();
+      draw();
+
+      window.addEventListener('resize', () => { resize(); createParticles(); });
+      window.addEventListener('mousemove', (e) => { mouse.x = e.clientX; mouse.y = e.clientY; });
+      window.addEventListener('mouseout', () => { mouse.x = -1000; mouse.y = -1000; });
+    })();
     </script>
   </body>
 </html>

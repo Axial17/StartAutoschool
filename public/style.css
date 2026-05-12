@@ -855,6 +855,31 @@ footer {
   .pricing-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
 
+  /* ── Mobile: focus on instructors, not cars ── */
+  .team-img,
+  .team-img-placeholder {
+    height: 240px;
+  }
+  .team-img {
+    object-position: center 15% !important;
+  }
+  /* Саят — person is right-center, face is upper */
+  .team-img.pos-sergey {
+    object-position: 75% 10% !important;
+  }
+  /* Елдос — horizontal photo, person in center */
+  .team-img.pos-center {
+    object-position: 60% 25% !important;
+  }
+  /* Даулет — person is left side */
+  .team-img.pos-mid {
+    object-position: 30% 15% !important;
+  }
+  /* Андрей — person is far right edge, face very high */
+  .team-img.pos-lower {
+    object-position: 95% 0% !important;
+  }
+
   footer { flex-direction: column; gap: 16px; text-align: center; }
   .hero-stats { gap: 24px; }
   .scroll-hint { left: 28px; }
